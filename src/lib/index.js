@@ -36,6 +36,7 @@ class Thermometer extends Component {
       theme: () => this.props.theme === 'light' || this.props.theme === 'dark' ? this.props.theme : 'light',
       value: this.props.value || 0, //default 0
       max: this.props.max || 100, //default 100
+      min: this.props.min || 0, //default 0
       steps: this.props.steps,
       format: this.props.format || '',
       size: () => this.props.size === 'small' || this.props.size === 'normal' || this.props.size === 'large' ? this.props.size : 'normal',
@@ -49,8 +50,8 @@ class Thermometer extends Component {
   _createIntervals() {
     if (this.options.steps) {
       for (let step = 0; step <= this.options.steps; step++) {
-        let val = ((this.options.max / this.options.steps) * step).toFixed(2)
-        let percent = (val / this.options.max) * 100
+        let val = ((this.options.max - this.options.min / this.options.steps) * step).toFixed(2)
+        let percent = (val / this.options.max - this.options.min) * 100
         let interval = { percent: percent, label: val + this.options.format }
         this.options.intervals.push(interval)
       }

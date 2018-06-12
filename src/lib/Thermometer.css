@@ -265,7 +265,7 @@
     margin: auto;
     z-index: 1; }
     .thermometer .thermometer__draw-b:after {
-      background-color: #f44336;
+      background-color: #2196F3;
       border-radius: 50%; }
     .thermometer .thermometer__draw-b:before {
       position: absolute;
@@ -274,5 +274,5 @@
       bottom: 40px;
       left: 0;
       height: 20px;
-      background-color: #f44336;
+      background-color: #2196F3;
       border-radius: 50px 50px 0 0; }
