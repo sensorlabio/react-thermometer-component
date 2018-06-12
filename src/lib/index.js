@@ -49,10 +49,11 @@ class Thermometer extends Component {
 
   _createIntervals() {
     if (this.options.steps) {
+      let step_value = (this.options.max - this.options.min) / this.options.steps;
       for (let step = 0; step <= this.options.steps; step++) {
-        let val = ((this.options.max - this.options.min / this.options.steps) * step).toFixed(2)
-        let percent = (val / this.options.max - this.options.min) * 100
-        let interval = { percent: percent, label: val + this.options.format }
+        let val = this.options.min + (step_value) * step;
+        let percent = ((val - this.options.min) * 100) / (this.options.max - this.options.min);
+        let interval = { percent: percent, label: val + this.options.format };
         this.options.intervals.push(interval)
       }
     }
