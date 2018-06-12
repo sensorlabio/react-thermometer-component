@@ -41,7 +41,7 @@ class Thermometer extends Component {
       format: this.props.format || '',
       size: () => this.props.size === 'small' || this.props.size === 'normal' || this.props.size === 'large' ? this.props.size : 'normal',
       height: this.props.height || 200, //default 200
-      valstr: () => this.options.value + this.options.format,
+      valstr: () => this.options.value.toFixed(4) + this.options.format,
       percent: () => ((this.options.value - this.options.min) * 100) / (this.options.max - this.options.min),
       intervals: []
     }
