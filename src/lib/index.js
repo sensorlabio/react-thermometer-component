@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-import './index.css'
+import './Thermometer.css'
 
 class Thermometer extends Component {
   render() {
