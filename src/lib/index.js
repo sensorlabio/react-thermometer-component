@@ -35,8 +35,8 @@ class Thermometer extends Component {
     return {
       theme: () => this.props.theme === 'light' || this.props.theme === 'dark' ? this.props.theme : 'light',
       value: this.props.value || 0, //default 0
-      max: this.props.max || 100, //default 100
-      min: this.props.min || 0, //default 0
+      max: parseFloat(this.props.max) || 100, //default 100
+      min: parseFloat(this.props.min) || 0, //default 0
       steps: this.props.steps,
       format: this.props.format || '',
       size: () => this.props.size === 'small' || this.props.size === 'normal' || this.props.size === 'large' ? this.props.size : 'normal',
