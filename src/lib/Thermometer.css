@@ -206,7 +206,7 @@
     bottom: 0;
     left: initial;
     width: 100%;
-    background: linear-gradient(#2196F3, #8BC34A, #f44336); }
+    background: linear-gradient(#f44336, #8BC34A, #2196F3); }
   .thermometer .thermometer__percent-current {
     position: absolute;
     top: 4px;
