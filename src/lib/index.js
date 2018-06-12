@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 
+import './Thermometer.css'
+
 class Thermometer extends Component {
   render() {
     this.options = this._generateOptions()
