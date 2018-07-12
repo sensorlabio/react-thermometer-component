@@ -145,6 +145,7 @@
 
 .thermometer {
   width: 100px;
+  padding-bottom: 20px;
   position: relative; }
   .thermometer ul.thermometer__statistics {
     position: absolute;
