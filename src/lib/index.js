@@ -7,8 +7,8 @@ class Thermometer extends Component {
     this.options = this._generateOptions()
     const theme = `thermometer--theme-${this.options.theme()}`
     const size = `thermometer--${this.options.size()}`
-    const height = `${this.options.height}px`
-    const width = `${this.options.width}px`
+    const height = `${this.options.height}px`;
+    const width = `${this.options.width}px`;
     const heightPercent = { height: `${this.options.percent()}%` }
     const heightBgColor = { height: `calc(${this.options.height}px - 57px)` }
     const valstr = this.options.valstr()
@@ -42,6 +42,7 @@ class Thermometer extends Component {
       format: this.props.format || '',
       size: () => this.props.size === 'small' || this.props.size === 'normal' || this.props.size === 'large' ? this.props.size : 'normal',
       height: this.props.height || 200, //default 200
+      width: this.props.width || 200,
       valstr: () => this.options.value.toFixed(4) + this.options.format,
       percent: () => ((this.options.value - this.options.min) * 100) / (this.options.max - this.options.min),
       intervals: []
