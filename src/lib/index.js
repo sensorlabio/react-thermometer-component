@@ -7,7 +7,8 @@ class Thermometer extends Component {
     this.options = this._generateOptions()
     const theme = `thermometer--theme-${this.options.theme()}`
     const size = `thermometer--${this.options.size()}`
-    const height = { height: `${this.options.height}px` }
+    const height = `${this.options.height}px`
+    const width = `${this.options.width}px`
     const heightPercent = { height: `${this.options.percent()}%` }
     const heightBgColor = { height: `calc(${this.options.height}px - 57px)` }
     const valstr = this.options.valstr()
@@ -15,7 +16,7 @@ class Thermometer extends Component {
     const stepIntervals = this._createIntervalsUI(this.options.intervals)
 
     return (
-      <div style={height} className={`thermometer ${size} ${theme}`}>
+      <div style={{height: height, width: width}} className={`thermometer ${size} ${theme}`}>
         <div className="thermometer__draw-a"></div>
         <div className="thermometer__draw-b"></div>
         <div className="thermometer__meter">
